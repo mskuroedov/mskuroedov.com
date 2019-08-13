@@ -1,6 +1,6 @@
 # mskuroedov.com
 
-> My cool Nuxt.js project
+>
 
 ## Build Setup
 
