@@ -1,0 +1,52 @@
+/*
+ * Theme definitions
+ */
+
+.day {
+}
+
+.night {
+
+
+}
+
+$themes: (
+  day: (
+    textColor:#333,
+    bgColor:white,
+    activeColor:#a500ff,
+    gradientStop1:white,
+    gradientStop2:lighten(#a500ff,20),
+    gradientStop3:#a500ff
+  ),
+  night: (
+    textColor: white,
+    bgColor: black,
+    activeColor: red,
+    gradientStop1:black,
+    gradientStop2:darken(red,20),
+    gradientStop3:red
+  ),
+);
+
+/*
+ * Implementation of themes
+ */
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
