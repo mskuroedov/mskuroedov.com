@@ -16,7 +16,7 @@
 </template>
 
 <script>
-  import PolygonSplash from '@/components/PolygonSplash'
+  import PolygonSplash from '@/components/animated/PolygonSplash'
 
   export default {
     name: "testing",

@@ -1,50 +1,102 @@
 <template>
-  <div class="welcome-block">
-    <Octagone/>
-    <div class="container-fluid">
-      <h2><span class="sorry">Sorry,</span><br> this site is currently under
-        <TextSplit text="development"/>
-      </h2>
-      <div class="links row">
-        <div class="col-12">
-          <p>You may contact me if you want! 😁⏬</p>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2">
-          <nuxt-link to="mailto:mskuroedovjob@gmail.com" target="_blank" class="poly">
-            <PolygonSplash :fa="['fas', 'envelope']"/>
-          </nuxt-link>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2">
-          <a href="https://t.me/mskuroedov" target="_blank" class="poly">
-            <PolygonSplash :fa="['fab', 'telegram']"/>
-          </a>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2">
-          <a href="https://vk.com/mskuroedov" target="_blank" class="poly">
-            <PolygonSplash :fa="['fab', 'vk']"/>
-          </a>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2">
-          <a href="https://www.instagram.com/mskuroedov/" target="_blank" class="poly">
-            <PolygonSplash :fa="['fab', 'instagram']"/>
-          </a>
+  <div>
+    <div class="welcome-block">
+      <Octagone/>
+      <div class="container-fluid">
+        <h2><span class="sorry">Sorry,</span><br> this site is currently under
+          <TextSplit text="development"/>
+        </h2>
+        <div class="links row">
+          <div class="col-12">
+            <p>You may contact me if you want! 😁⏬</p>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2">
+            <nuxt-link to="mailto:mskuroedovjob@gmail.com" target="_blank" class="poly">
+              <PolygonSplash :fa="['fas', 'envelope']"/>
+            </nuxt-link>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2">
+            <a href="https://t.me/mskuroedov" target="_blank" class="poly">
+              <PolygonSplash :fa="['fab', 'telegram']"/>
+            </a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2">
+            <a href="https://vk.com/mskuroedov" target="_blank" class="poly">
+              <PolygonSplash :fa="['fab', 'vk']"/>
+            </a>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2">
+            <a href="https://www.instagram.com/mskuroedov/" target="_blank" class="poly">
+              <PolygonSplash :fa="['fab', 'instagram']"/>
+            </a>
+          </div>
         </div>
       </div>
     </div>
+    <div class="container-fluid">
+      <Chacram/>
+    </div>
+
   </div>
 </template>
 
 <script>
-  import Octagone from '@/components/Octagone'
-  import PolygonSplash from '@/components/PolygonSplash'
-  import TextSplit from '@/components/TextSplit'
+  import Octagone from '@/components/animated/Octagone'
+  import BackPolygons from '@/components/animated/BackPolygons'
+  import PolygonSplash from '@/components/animated/PolygonSplash'
+  import TextSplit from '@/components/animated/TextSplit'
+  import Chacram from '@/components/animated/Chacram'
 
   export default {
     components: {
       Octagone,
       TextSplit,
-      PolygonSplash
+      BackPolygons,
+      PolygonSplash,
+      Chacram
     },
+    data(){
+      return{
+        a: null,
+        key:''
+      }
+    },
+    mounted(){
+      // document.addEventListener('keyup',this.secretEnter);
+      //first init of vuex
+      // console.log('nuxtServerInit');
+      // var dt = new Date();
+      // var time = dt.getHours();
+      // console.log(time);
+      //
+      // if(time > 6 && time < 19){
+      //   this.store.commit('setDayTheme','day');
+      // }else{
+      //   this.store.commit('setDayTheme','night');
+      // }
+    },
+    watch:{
+      key(val){
+        if(val === 'fuck'){
+          console.log("GOGOGOG")
+        }else{
+          if(!['fuck'].includes(val)){
+            console.log('cleared')
+          }else{
+
+          }
+        }
+      }
+    },
+    computed:{
+    },
+    methods:{
+      secretEnter(e){
+        let letter = e.key;
+        this.key += letter;
+      }
+    },
+
   }
 </script>
 

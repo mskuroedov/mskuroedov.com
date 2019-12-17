@@ -39,7 +39,7 @@
     methods: {
       vis(isVisible, entry) {
         isVisible ? this.appearClass = 'expand' : this.appearClass = '';
-        console.log(isVisible)
+        // console.log(isVisible)
       }
     }
   }
