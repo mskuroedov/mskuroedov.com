@@ -14,6 +14,10 @@
       text: {
         type: String,
         required: true
+      },
+      infinite:{
+        type:Boolean,
+        default:false
       }
     },
     data(){
@@ -24,10 +28,12 @@
     mounted(){
       setTimeout(()=>{
         this.step = 'step-1';
-      },300)
-      setTimeout(()=>{
-        this.step = 'step-2';
-      },1900)
+      },300);
+      if(!this.infinite){
+        setTimeout(()=>{
+          this.step = 'step-2';
+        },1900)
+      }
     }
   }
 </script>
