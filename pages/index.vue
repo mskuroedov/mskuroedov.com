@@ -1,9 +1,9 @@
 <template>
   <div>
-    <!--<Landing1/>-->
-    <!--<Landing2/>-->
-    <!--<Landing3/>-->
-    <DevelopmentBlock/>
+    <Landing1/>
+    <Landing2/>
+    <Landing3/>
+    <!--<DevelopmentBlock/>-->
   </div>
 </template>
 
