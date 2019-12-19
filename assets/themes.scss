@@ -6,8 +6,6 @@
 }
 
 .night {
-
-
 }
 
 $themes: (
@@ -16,16 +14,18 @@ $themes: (
     bgColor:white,
     activeColor:#a500ff,
     gradientStop1:white,
-    gradientStop2:lighten(#a500ff,20),
-    gradientStop3:#a500ff
+    gradientStop2:lighten(#a500ff, 20),
+    gradientStop3:#a500ff,
+    filter: brightness(0.85) sepia(1) hue-rotate(220deg) saturate(3)
   ),
   night: (
     textColor: white,
     bgColor: black,
     activeColor: red,
     gradientStop1:black,
-    gradientStop2:darken(red,20),
-    gradientStop3:red
+    gradientStop2:darken(red, 20),
+    gradientStop3:red,
+    filter: brightness(0.7) sepia(1) hue-rotate(-48deg) saturate(7)
   ),
 );
 

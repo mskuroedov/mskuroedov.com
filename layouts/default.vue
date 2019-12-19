@@ -1,7 +1,7 @@
 <template>
   <div :class="theme">
     <div class="app" >
-      <Navbar/>
+      <!--<Navbar/>-->
       <main>
         <nuxt/>
       </main>
@@ -20,6 +20,18 @@
     async fetch({store}) {
       if (store.getters['getTheme'].length === 0) {
         await store.dispatch('getTheme')
+      }
+    },
+    mounted(){
+      //setup theme
+      var dt = new Date();
+      var time = dt.getHours();
+      console.log(time);
+
+      if(time > 6 && time < 16){
+        this.$store.commit('setDayTheme','day');
+      }else{
+        this.$store.commit('setDayTheme','night');
       }
     },
     computed: {

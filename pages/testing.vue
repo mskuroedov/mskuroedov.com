@@ -1,5 +1,9 @@
 <template>
-  <div class="container-fluid">
+  <div >
+
+    <Landing1/>
+    <Landing2/>
+    <Landing3/>
     <div>Store theme {{theme()}}</div>
     <div>Store daytime {{time()}}</div>
     <div>
@@ -17,11 +21,17 @@
 
 <script>
   import PolygonSplash from '@/components/animated/PolygonSplash'
+  import Landing1 from '@/components/landing/Landing1'
+  import Landing2 from '@/components/landing/Landing2'
+  import Landing3 from '@/components/landing/Landing3'
 
   export default {
     name: "testing",
     components: {
-      PolygonSplash
+      PolygonSplash,
+      Landing1,
+      Landing2,
+      Landing3
     },
     data() {
       return {
@@ -38,6 +48,6 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 
 </style>

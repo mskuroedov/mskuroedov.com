@@ -1,10 +1,13 @@
 <template>
   <nav class="">
     <!--TextSplit-->
-    <a class="navbar-brand" href="/">
+    <nuxt-link class="navbar-brand" to="/">
       <TextSplit text="mskuroedov" :infinite="true"/>
-    </a>
+    </nuxt-link>
     <div class="menu">
+      <!--<div class="menu-burger">-->
+          <!--<button>bur</button>-->
+      <!--</div>-->
       <a href="#">Main</a>
       <a href="#">About</a>
       <a href="#">Contacts</a>
