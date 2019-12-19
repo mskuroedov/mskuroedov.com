@@ -79,5 +79,17 @@
         }
       }
     }
+
+
+    @media(max-width: 767.98px){
+      .lb-3__title{
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+        letter-spacing: 3px;
+      }
+      .sa{
+        margin: 2rem 0;
+      }
+    }
   }
 </style>

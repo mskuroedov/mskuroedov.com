@@ -4,18 +4,18 @@
     <Landing1/>
     <Landing2/>
     <Landing3/>
-    <div>Store theme {{theme()}}</div>
-    <div>Store daytime {{time()}}</div>
-    <div>
+    <!--<div>Store theme {{theme()}}</div>-->
+    <!--<div>Store daytime {{time()}}</div>-->
+    <!--<div>-->
       <!--<font-awesome-icon :icon="['fab', 'envelope']"/>-->
       <!--<font-awesome-icon :icon="['fab', 'vk']"/>-->
       <!--<font-awesome-icon :icon="['fas', 'coffee']"/>-->
-    </div>
-    <div class="container">
-      <div class="col-4">
-          <PolygonSplash :fa="['fab', 'vk']"/>
-      </div>
-    </div>
+    <!--</div>-->
+    <!--<div class="container">-->
+      <!--<div class="col-4">-->
+          <!--<PolygonSplash :fa="['fab', 'vk']"/>-->
+      <!--</div>-->
+    <!--</div>-->
   </div>
 </template>
 

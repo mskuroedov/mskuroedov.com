@@ -31,7 +31,7 @@
       if(time > 6 && time < 16){
         this.$store.commit('setDayTheme','day');
       }else{
-        this.$store.commit('setDayTheme','night');
+        this.$store.commit('setDayTheme','day');
       }
     },
     computed: {

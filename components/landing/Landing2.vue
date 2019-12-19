@@ -1,6 +1,6 @@
 <template>
   <div class="lb-2">
-    <Octagone/>
+    <!--<Octagone/>-->
     <div class="slide-show">
       <div class="slide-show__container">
         <img src="@/static/icons/HTML5_logo.svg" alt="logo" class="slide-show__item"
@@ -20,7 +20,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <h3 class="lb-2__title">Sick skills</h3>
+          <h3 class="lb-2__title">My skills</h3>
         </div>
         <Skill_animation ref="e1" :text="'HTML'"
                          :class="{ '--hover': hover_id && hover_id === 'HTML','--not-hover':hover_id && hover_id !== 'HTML'}"
@@ -160,7 +160,7 @@
 
       &__item {
         height: auto;
-        transition: width .1s,opacity .2s,transform .2s;
+        transition: width .2s .3s,opacity .3s,transform .3s;
         opacity: 0;
         transform: translateX(150%);
         width: 0;
@@ -179,9 +179,19 @@
           /*max-width: 100%;*/
           opacity: 1;
           transform: translateX(0);
-          transition: width .6s,opacity .2s,transform .2s;
+          transition: width 0s,opacity .3s,transform .3s;
 
         }
+      }
+    }
+
+
+    @media(max-width: 767.98px){
+      .lb-2__title{
+        font-size: 3rem;
+      }
+      .sa{
+        margin: 2rem 0;
       }
     }
   }

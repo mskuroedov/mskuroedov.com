@@ -2,11 +2,13 @@
   <div class="lb-1">
     <div class="container-fluid">
       <Chacram/>
-      <div class="row">
-        <div class="col-12 col-lg-8 text-block">
+      <div class="row text-block">
+        <div class="col-8 col-lg-8">
           <h2>Maxim Kuroedov</h2>
+        </div>
+        <div class="col-12 col-sm-10">
           <p>Front-end development.</p>
-          <p>This page is introducing my works and skills in JS,CSS and HTML.</p>
+          <p>This page is introducing my <span class="soon">works<span class="soon__text">[soon]</span></span>  and skills.</p>
         </div>
       </div>
     </div>
@@ -48,7 +50,39 @@
   }
   p{
     font-size: 3rem;
+    .soon{
+      position: relative;
+      text-decoration: line-through;
+      &__text{
+        position: absolute;
+        left: 0;
+        right: 0;
+        font-size: .6em;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  @media(max-width: 767.98px){
+    h2{
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    p{
+      font-size: 1.5rem;
+    }
+  }
 
+  @media(max-width: 991.98px){
+  }
+  @media(max-width: 1199.98px){
+    .chacram{
+      top: 0;
+      bottom:auto;
+      width: 60vw;
+    }
   }
 }
 </style>

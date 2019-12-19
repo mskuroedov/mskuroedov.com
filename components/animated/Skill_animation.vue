@@ -67,7 +67,12 @@
         transform: translateY(0);
         opacity: .9;
       }
+    }
 
+    @media(max-width: 767.98px){
+      .sa__text{
+        font-size: 3rem;
+      }
     }
   }
 </style>
