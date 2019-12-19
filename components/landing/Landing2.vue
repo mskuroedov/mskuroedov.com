@@ -22,34 +22,22 @@
         <div class="col-12">
           <h3 class="lb-2__title">My skills</h3>
         </div>
-        <Skill_animation ref="e1" :text="'HTML'"
-                         :class="{ '--hover': hover_id && hover_id === 'HTML','--not-hover':hover_id && hover_id !== 'HTML'}"
-                         @mouseenter="setHoverEl" @mouseleave="setHoverEl">
+        <Skill_animation ref="e1" :text="'HTML'">
           <img src="@/static/icons/HTML5_logo.svg" alt="logo" class="sa__logo">
         </Skill_animation>
-        <Skill_animation ref="e2" :text="'CSS'"
-                         :class="{ '--hover': hover_id && hover_id === 'CSS','--not-hover':hover_id && hover_id !== 'CSS'}"
-                         @mouseenter="setHoverEl('CSS')" @mouseleave="setHoverEl(null)">
+        <Skill_animation ref="e2" :text="'CSS'">
           <img src="@/static/icons/CSS3_logo.svg" alt="logo" class="sa__logo">
         </Skill_animation>
-        <Skill_animation ref="e3" :text="'SCSS'"
-                         :class="{ '--hover': hover_id && hover_id === 'SCSS','--not-hover':hover_id && hover_id !== 'SCSS'}"
-                         @mouseenter="setHoverEl('SCSS')" @mouseleave="setHoverEl(null)">
+        <Skill_animation ref="e3" :text="'SCSS'">
           <img src="@/static/icons/sass-1.svg" alt="logo" class="sa__logo">
         </Skill_animation>
-        <Skill_animation ref="e4" :text="'VueJS'"
-                         :class="{ '--hover': hover_id && hover_id === 'Vue','--not-hover':hover_id && hover_id !== 'Vue'}"
-                         @mouseenter="setHoverEl('Vue')" @mouseleave="setHoverEl(null)">
+        <Skill_animation ref="e4" :text="'VueJS'">
           <img src="@/static/icons/Vue.js_Logo.svg" alt="logo" class="sa__logo">
         </Skill_animation>
-        <Skill_animation ref="e5" :text="'Nuxt'"
-                         :class="{ '--hover': hover_id && hover_id === 'Nuxt','--not-hover':hover_id && hover_id !== 'Nuxt'}"
-                         @mouseenter="setHoverEl('Nuxt')" @mouseleave="setHoverEl(null)">
+        <Skill_animation ref="e5" :text="'Nuxt'">
           <img src="@/static/icons/nuxt-square.svg" alt="logo" class="sa__logo">
         </Skill_animation>
-        <Skill_animation ref="e6" :text="'Webpack'"
-                         :class="{ '--hover': hover_id && hover_id === 'Webpack','--not-hover':hover_id && hover_id !=='Webpack'}"
-                         @mouseenter="setHoverEl('Webpack')" @mouseleave="setHoverEl(null)">
+        <Skill_animation ref="e6" :text="'Webpack'">
           <img src="@/static/icons/webpack_logo.svg" alt="logo" class="sa__logo">
         </Skill_animation>
       </div>
@@ -150,7 +138,7 @@
       &__container {
         position: -webkit-sticky;
         position: sticky;
-        top: 0;
+        top: 300px;
         z-index: 1;
         display: flex;
         align-items: center;
@@ -171,11 +159,11 @@
         &.--show {
           max-width: 16%;
           width: 16%;
-          /*-ms-flex-preferred-size: 0;*/
-          /*flex-basis: 0;*/
-          /*-ms-flex-positive: 1;*/
-          /*-webkit-box-flex: 1;*/
-          /*flex-grow: 1;*/
+          -ms-flex-preferred-size: 0;
+          flex-basis: 0;
+          -ms-flex-positive: 1;
+          -webkit-box-flex: 1;
+          flex-grow: 1;
           /*max-width: 100%;*/
           opacity: 1;
           transform: translateX(0);
@@ -186,7 +174,21 @@
     }
 
 
+    @media(max-width: 991.98px){
+      padding-bottom: 30rem;
+      .lb-2__title{
+        font-size: 3rem;
+      }
+      .sa{
+        margin: 2rem 0;
+      }
+      .sa__text{
+        font-size: 3rem;
+      }
+    }
+
     @media(max-width: 767.98px){
+      padding-bottom: 15rem;
       .lb-2__title{
         font-size: 3rem;
       }

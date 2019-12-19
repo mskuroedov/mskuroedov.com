@@ -3,29 +3,29 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <h3 class="lb-3__title">U may contact me</h3>
+          <h3 class="lb-3__title">My contacts</h3>
         </div>
         <div class="col-12">
           <div class="links row justify-content-center">
             <div class="col-12">
               <!--<p>You may contact me if you want! 😁⏬</p>-->
             </div>
-            <div class="col-6 col-md-3 col-lg-2">
+            <div class="col-6 col-md-3 col-lg-3 col-xl-2">
               <nuxt-link to="mailto:mskuroedovjob@gmail.com" target="_blank" class="poly">
                 <PolygonSplash :fa="['fas', 'envelope']"/>
               </nuxt-link>
             </div>
-            <div class="col-6 col-md-3 col-lg-2">
+            <div class="col-6 col-md-3 col-lg-3 col-xl-2">
               <a href="https://t.me/mskuroedov" target="_blank" class="poly">
                 <PolygonSplash :fa="['fab', 'telegram']"/>
               </a>
             </div>
-            <div class="col-6 col-md-3 col-lg-2">
+            <div class="col-6 col-md-3 col-lg-3 col-xl-2">
               <a href="https://vk.com/mskuroedov" target="_blank" class="poly">
                 <PolygonSplash :fa="['fab', 'vk']"/>
               </a>
             </div>
-            <div class="col-6 col-md-3 col-lg-2">
+            <div class="col-6 col-md-3 col-lg-3 col-xl-2">
               <a href="https://www.instagram.com/mskuroedov/" target="_blank" class="poly">
                 <PolygonSplash :fa="['fab', 'instagram']"/>
               </a>

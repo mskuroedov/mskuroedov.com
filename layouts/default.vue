@@ -1,7 +1,7 @@
 <template>
   <div :class="theme">
     <div class="app" >
-      <!--<Navbar/>-->
+      <Navbar/>
       <main>
         <nuxt/>
       </main>
@@ -31,7 +31,7 @@
       if(time > 6 && time < 16){
         this.$store.commit('setDayTheme','day');
       }else{
-        this.$store.commit('setDayTheme','day');
+        this.$store.commit('setDayTheme','night');
       }
     },
     computed: {

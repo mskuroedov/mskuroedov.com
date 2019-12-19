@@ -4,14 +4,15 @@
     <nuxt-link class="navbar-brand" to="/">
       <TextSplit text="mskuroedov" :infinite="true"/>
     </nuxt-link>
-    <div class="menu">
-      <!--<div class="menu-burger">-->
-          <!--<button>bur</button>-->
-      <!--</div>-->
-      <a href="#">Main</a>
-      <a href="#">About</a>
-      <a href="#">Contacts</a>
-    </div>
+    <ThemeSwitcher/>
+    <!--<div class="menu">-->
+      <!--&lt;!&ndash;<div class="menu-burger">&ndash;&gt;-->
+          <!--&lt;!&ndash;<button>bur</button>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--<a href="#">Main</a>-->
+      <!--<a href="#">About</a>-->
+      <!--<a href="#">Contacts</a>-->
+    <!--</div>-->
     <div class="socials">
       <a href="mailto:mskuroedovjob@gmail.com" class="social-link">
         <font-awesome-icon :icon="['fas', 'envelope']"/>
@@ -54,10 +55,12 @@
 
 <script>
   import TextSplit from '@/components/animated/TextSplit'
+  import ThemeSwitcher from '@/components/common/ThemeSwitcher'
 
   export default {
     components: {
-      TextSplit
+      TextSplit,
+      ThemeSwitcher
     },
     computed: {
       hasToken() {
@@ -104,6 +107,19 @@
       /*&:first-of-type{*/
         /*margin-left: auto;*/
       /*}*/
+    }
+
+
+    @media(max-width: 767.98px){
+      flex-wrap: wrap;
+      .socials{
+        width: 100%;
+        text-align: center;
+        a{
+          margin-right: 20px;
+          margin-left: 0;
+        }
+      }
     }
   }
 </style>
